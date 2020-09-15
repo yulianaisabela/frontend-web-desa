@@ -78,7 +78,7 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle"  href="index.html">
+														<a class="dropdown-item dropdown-toggle "  href="index.html">
 														Beranda
 														</a>
 													</li>
@@ -93,12 +93,12 @@
 														</a>
 														<ul class="dropdown-menu">
 															<li>
-																<a class="dropdown-item " href="data-wilayah-administratif.html">
+																<a class="dropdown-item" href="data-wilayah-administratif.html">
 																	Data Wilayah Administratif
 																</a>
 															</li>
 															<li>
-																<a class="dropdown-item" href="data-pendidikan.html">
+																<a class="dropdown-item " href="data-pendidikan.html">
 																	Data Pendidikan
 																</a>
 															</li>
@@ -193,7 +193,7 @@
 							</div>
 							<div class="col-md-4 order-1 order-md-2 align-self-center">
 								<ul class="breadcrumb d-block text-md-right">
-									<li><a href="index.html">Beranda</a></li>
+									<li><a href="demo-education.html">Beranda</a></li>
 									<li class="active text-color-light">Data Desa</li>
 								</ul>
 							</div>
@@ -203,90 +203,99 @@
                
 
 				<section class="section section-default border-0 my-0 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="750">
-                    <div class="container">                 
+                    <div class="container">
                         <div class="row">
                             <div class="col-lg-9">
-								<h2 class="font-weight-bold">Demografi Berdasarkan Populasi Per Wilayah</h2>
-                                <table class="table table-bordered table-striped">
+								<h2 class="font-weight-bold">Demografi Berdasarkan Status Perkawinan</h2>
+								<h4 class="font-weight-bold">Grafik Data Status Perkawinan</h4>
+                                <!-- Chart HERE -->
+                                <div class="row">
+                                    <div class="col ">
+                                        <hr class="solid">
+                                    </div>
+								</div>
+								<h4 class="font-weight-bold">Tabel Data Status Perkawinan</h4>
+								<table class="table table-bordered table-striped">
                                     <thead>
                                         <tr class="info">
-                                            <th>No</th>
-                                            <th>Dusun</th>
-                                            <th>Kepala Dusun</th>
-                                            <th>Jumlah RT</th>
-                                            <th>Jumlah KK</th>
-                                            <th>Jumlah Penduduk</th>
-                                            <th>Laki-laki</th>
-                                            <th>Perempuan</th>
-                                        </tr>
+                                            <th rowspan="2" style="vertical-align: middle; text-align: center;">No</th>
+                                            <th rowspan="2" style="vertical-align: middle; text-align: center;">Kelompok</th>
+                                            <th colspan="2" style="text-align:center;">Jumlah</th>
+                                            <th colspan="2" style="text-align:center;">Laki-Laki</th>
+                                            <th colspan="2" style="text-align:center;">Perempuan</th>
+										</tr>
+										<tr>
+											<th style="text-align:center;">n</th>
+											<th style="text-align:center;">%</th>
+											<th style="text-align:center;">n</th>
+											<th style="text-align:center;">%</th>
+											<th style="text-align:center;">n</th>
+											<th style="text-align:center;">%</th>
+										</tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
-												<!-- number -->
+												<!-- Number -->
                                                 1
                                             </td>
                                             <td>
-												<!-- nama dusun -->
-												ex: Dusun 1
+												<!-- Kelompok -->
+                                                ex: Kawin
                                             </td>
                                             <td>
-												<!-- Kepala dusun -->
-												ex: Kafri
+                                                <!-- n -->
                                             </td>
                                             <td>
-												<!-- Jumlah rt -->
-                                                ex: 10
+                                                <!-- %  -->
                                             </td>
                                             <td>
-												<!-- Jumlah kk -->
-												ex: 20
+												<!-- n Laki-Laki -->
 											</td>
                                             <td>
-												<!-- jumlah Penduduk -->
-												ex: 100
+												<!-- % Laki-Laki -->
 											</td>
                                             <td>
-												<!-- Laki-laki -->
-												ex: 40
+												<!-- n Perempuan -->
 											</td>
                                             <td>
-												<!-- Perempuan -->
-												ex: 60
+												<!-- % Perempuan -->
 											</td>
                                         </tr>
                                         <tr class="font-weight-bold">
-                                            <td colspan="3"  style="text-align:center;">Jumlah</td>
+                                            <td colspan="2"  style="text-align:center;">Jumlah</td>
                                             <td>
-												<!-- jumlah Rt -->
+												<!-- jumlah n -->
 											</td>
                                             <td>
-												<!-- jumlah kk -->
+												<!-- jumlah % -->
 											</td>
                                             <td>
-												<!-- jumlah Penduduk  -->
+												<!-- jumlah n Laki-Laki -->
 											</td>
                                             <td>
-												<!-- jumlah Laki-laki -->
+												<!-- jumlah % Laki-Laki -->
 											</td>
                                             <td>
-												<!-- jumlah Perempuan -->
+												<!-- jumlah n Perempuan -->
+											</td>
+											<td>
+												<!-- jumlah % Perempuan -->
 											</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            
                             </div>
-                            <div class="col-lg-3">
+							<div class="col-lg-3">
                                 <aside class="sidebar">
                                     <h5 class="font-weight-bold pt-4">Data Desa</h5>
-                                    <ul class="nav nav-list flex-column mb-5">
-                                        <li class="nav-item"><a class="nav-link active" href="data-wilayah-administratif.html">Demografi Berdasar Populasi Per Wilayah</a></li>
+									<ul class="nav nav-list flex-column mb-5">
+                                        <li class="nav-item "><a class="nav-link" href="data-wilayah-administratif.html">Demografi Berdasar Populasi Per Wilayah</a></li>
                                         <li class="nav-item"><a class="nav-link" href="data-pendidikan.html">Data Pendidikan</a></li>
                                         <li class="nav-item"><a class="nav-link" href="data-pekerjaan.html">Data Pekerjaan</a></li>
                                         <li class="nav-item"><a class="nav-link" href="data-agama.html">Data Agama</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="data-jenis-kelamin">Data Jenis Kelamin</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="data-perkawinan">Data Perkawinan</a></li>    
+                                        <li class="nav-item"><a class="nav-link" href="data-jenis-kelamin.html">Data Jenis Kelamin</a></li>
+                                        <li class="nav-item"><a class="nav-link active" href="data-perkawinan.html">Data Perkawinan</a></li>
                                     </ul>
                                     
                                 </aside>
@@ -294,6 +303,8 @@
                         </div>
                     </div>
                 </section>
+                
+
 				<footer id="footer" class="bg-color-quaternary border-top-0 mt-0">
 					<div class="footer-copyright bg-color-quaternary border-top-0">
 						<div class="container">
