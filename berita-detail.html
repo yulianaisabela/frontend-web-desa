@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Surat | Desa</title>	
+		<title>Berita | Desa</title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -78,7 +78,7 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle "  href="index.html">
+														<a class="dropdown-item dropdown-toggle"  href="index.html">
 														Beranda
 														</a>
 													</li>
@@ -94,7 +94,7 @@
 														<ul class="dropdown-menu">
 															<li>
 																<a class="dropdown-item" href="data-wilayah-administratif.html">
-																	Data Penduduk
+																	Data Wilayah Administratif
 																</a>
 															</li>
 															<li>
@@ -140,12 +140,12 @@
 														</a>
 													</li> -->
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle active" href="surat-page.html">
+														<a class="dropdown-item dropdown-toggle" href="surat-page.html">
 															Surat Online
 														</a>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="berita.html">
+														<a class="dropdown-item dropdown-toggle active" href="berita.html">
 															Berita
 														</a>
 													</li>
@@ -189,17 +189,18 @@
 
 			<div role="main" class="main">
 				
-				<section class="page-header page-header-modern page-header-background page-header-background-sm parallax custom-page-header my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="img/demos/education/parallax/parallax-7.jpg">
+				<section class="page-header page-header-modern page-header-background page-header-background-sm parallax custom-page-header my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="img/demos/education/parallax/parallax-4.jpg">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
-								<h1 class="font-weight-bold">Surat Online</h1>
-								<span class="text-color-light d-block position-relative font-weight-light">Pelayanan Surat Online</span>
+								<h1 class="font-weight-bold">Berita</h1>
+								<span class="text-color-light d-block position-relative font-weight-light">Berita Terkini</span>
+
 							</div>
 							<div class="col-md-4 order-1 order-md-2 align-self-center">
 								<ul class="breadcrumb d-block text-md-right">
 									<li><a href="index.html">Home</a></li>
-									<li class="active text-color-light">Surat Online</li>
+									<li class="active text-color-light">Berita</li>
 								</ul>
 							</div>
 						</div>
@@ -207,77 +208,119 @@
 				</section>
 
 				<section class="section bg-color-tertiary border-0 my-0 pb-4">
+
 					<div class="container">
-						
+						<div class="row pt-1 pb-4 mb-3">
+							<div class="col-lg-9">
+								<div class="post-infos mb-4">
+									<h4 class="font-weight-bold mb-4">Judul</h4>
+								</div>
 
-								<h2 class="font-weight-bold mb-4">Isi data Anda</h2>
-								<p class="pb-3 mb-4">Untuk mendapatkan pelayanan surat online harap pastikan Anda mengisi dengan benar.</p>
+								<hr class="solid">
+								<span class="info posted-by">
+									By by:
+									<span class="post-author font-weight-semibold text-color-dark">
+										John Doe
+									</span>
+								</span>
+								<span class="info comments ml-4">
+									Length:
+									<span class="comments-number text-color-primary font-weight-semibold">
+										2 Hours
+									</span>
+								</span>
+								<span class="info like ml-4">
+									Date:
+									<span class="like-number font-weight-semibold custom-color-dark">
+										Jan 2018
+									</span>
+								</span>
 
-								<form id="contactForm" class="contact-form custom-form-style-1" action="php/contact-form.php" method="POST">
-                                    <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-                                        <strong>Terkirim!</strong> Permintaan Anda berhasil diterima. Pengambilan surat harap dilukukan d kantor
-                                    </div>
-                                
-                                    <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-                                        <strong>Gagal!</strong> Permintaan Anda gagal terkirim.
-                                        <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
-                                    </div>
-                                    
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-6">
-                                            <label class="required font-weight-bold text-dark text-2">Nama Lengkap</label>
-                                            <input type="text" value="" data-msg-required="Silahkan masukkan nama Anda." maxlength="100" class="form-control" name="name" id="name" required>
-                                        </div>
-                                        <div class="form-group col-lg-6">
-                                            <label class="required font-weight-bold text-dark text-2">NIK</label>
-                                            <input type="number" value="" data-msg-required="Silahkan masukkan NIK Anda."  maxlength="16" class="form-control" name="nik" id="nik" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col">
-                                            <label class="required font-weight-bold text-dark text-2">Jenis Surat</label>
-                                            <select id="jenis" class="form-control" size="0" data-msg-required="Silahkan pilih jenis surat." required>
-                                                <option value=""></option>
-                                                <option value="1">Surat Keterangan Domisili</option>
-                                                <option value="2">Surat Keterangan Sudah/Belum Menikah</option>
-                                                <option value="3">Surat Keterangan Usaha</option>
-                                    
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col">
-                                            <label class="required font-weight-bold text-dark text-2">Perihal Surat</label>
-                                            <textarea maxlength="5000" data-msg-required="Silahkan masukkan perihal surat." rows="8" class="form-control" name="message" id="message" required></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-										<div class="form-group col">
-											<input type="submit" value="Kirim" class="btn btn-primary custom-btn-style-1 text-uppercase float-right" data-loading-text="Loading...">
+								<div class="center mt-3 mb-4">
+									<img class="img-fluid border-radius-0" src="img/F4.4-Muara-Lakologou.jpg" alt="">	
+								</div>
+
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat.</p>
+
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat ex finibus urna tincidunt, auctor ullamcorper risus luctus. Nunc et feugiat arcu, in placerat risus. Phasellus condimentum sapien vitae. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+
+							</div>
+							<!-- Sidebar -->
+							<div class="col-lg-3">
+								<aside class="sidebar">
+									<h5 class="font-weight-bold pt-4">Berita Lainnya</h5>
+									<div class="featured-box featured-box-primary featured-box-text-left mt-0"">
+										<div class="thumb-info thumb-info-hide-wrapper-bg custom-thumb-info-style-1">
+											<div class="thumb-info-wrapper">
+												<a href="berita-detail.html"><img src="img/demos/education/courses/course-1.jpg" class="img-fluid" alt=""></a>
+											</div>
+											<div class="thumb-info-caption">
+												<h3 class="font-weight-semibold text-transform-none"><a href="berita-detail.html" class="custom-link-color-dark">Aeronautical and Manufacturing</a></h3>
+
+											</div>
+											<div class="thumb-info-footer">
+												<ul class="nav text-1">
+													<li><a href="berita-detail.html"><i class="far fa-user text-color-primary"></i> John Doe</a></li>
+													<li class="ml-3"><a href="berita-detail.html"><i class="far fa-clock text-color-primary"></i> 30 Minutes</a></li>
+												</ul>
+											</div>
 										</div>
 									</div>
-                                </form>    
-							</div>
-							
+									<div class="featured-box featured-box-primary featured-box-text-left mt-0"">
+										<div class="thumb-info thumb-info-hide-wrapper-bg custom-thumb-info-style-1">
+											<div class="thumb-info-wrapper">
+												<a href="berita-detail.html"><img src="img/demos/education/courses/course-1.jpg" class="img-fluid" alt=""></a>
+											</div>
+											<div class="thumb-info-caption">
+												<h3 class="font-weight-semibold text-transform-none"><a href="berita-detail.html" class="custom-link-color-dark">Aeronautical and Manufacturing</a></h3>
 
-					
-					</div>
-				</section>
+											</div>
+											<div class="thumb-info-footer">
+												<ul class="nav text-1">
+													<li><a href="berita-detail.html"><i class="far fa-user text-color-primary"></i> John Doe</a></li>
+													<li class="ml-3"><a href="berita-detail.html"><i class="far fa-clock text-color-primary"></i> 30 Minutes</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="featured-box featured-box-primary featured-box-text-left mt-0"">
+										<div class="thumb-info thumb-info-hide-wrapper-bg custom-thumb-info-style-1">
+											<div class="thumb-info-wrapper">
+												<a href="berita-detail.html"><img src="img/demos/education/courses/course-1.jpg" class="img-fluid" alt=""></a>
+											</div>
+											<div class="thumb-info-caption">
+												<h3 class="font-weight-semibold text-transform-none"><a href="berita-detail.html" class="custom-link-color-dark">Aeronautical and Manufacturing</a></h3>
 
-				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-			
-
-				<footer id="footer" class="bg-color-quaternary border-top-0 mt-0">
-					<div class="footer-copyright bg-color-quaternary border-top-0">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<p class="text-center">© Copyright 2019. All Rights Reserved.</p>
+											</div>
+											<div class="thumb-info-footer">
+												<ul class="nav text-1">
+													<li><a href="berita-detail.html"><i class="far fa-user text-color-primary"></i> John Doe</a></li>
+													<li class="ml-3"><a href="berita-detail.html"><i class="far fa-clock text-color-primary"></i> 30 Minutes</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
 								</div>
+								
+									
+								</aside>
 							</div>
 						</div>
 					</div>
-				</footer>
+				</section>
+
+			<footer id="footer" class="bg-color-quaternary border-top-0 mt-0">
+				<div class="footer-copyright bg-color-quaternary border-top-0">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p class="text-center">© Copyright 2019. All Rights Reserved.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 
 		<!-- Vendor -->
@@ -308,8 +351,6 @@
 
 		
 
-		<!-- Current Page Vendor and Views -->
-		<script src="js/views/view.contact.js"></script>
 
 		<!-- Demo -->
 		<script src="js/demos/demo-education.js"></script>
@@ -321,95 +362,6 @@
 		<script src="js/theme.init.js"></script>
 
 
-		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-		<script>
-
-			/*
-			Map Settings
-
-				Find the Latitude and Longitude of your address:
-					- https://www.latlong.net/
-					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-
-			*/
-
-			// Map Markers
-			var mapMarkers = [{
-				address: "New York, NY 10017",
-				html: "<strong>Porto Education</strong><br>123 Porto Blvd, Suite 100<br>New York, NY",
-				icon: {
-					image: "img/pin-light.png",
-					iconsize: [26, 46],
-					iconanchor: [12, 46]
-				},
-				popup: true
-			}];
-
-			// Map Initial Location
-			var initLatitude = 40.75198;
-			var initLongitude = -73.96978;
-
-			// Map Extended Settings
-			var mapSettings = {
-				controls: {
-					draggable: (($.browser.mobile) ? false : true),
-					panControl: true,
-					zoomControl: true,
-					mapTypeControl: true,
-					scaleControl: true,
-					streetViewControl: true,
-					overviewMapControl: true
-				},
-				scrollwheel: false,
-				markers: mapMarkers,
-				latitude: initLatitude,
-				longitude: initLongitude,
-				zoom: 16
-			};
-
-			var map = $('#googlemaps').gMap(mapSettings),
-				mapRef = $('#googlemaps').data('gMap.reference');
-
-			// Map text-center At
-			var mapCenterAt = function(options, e) {
-				e.preventDefault();
-				$('#googlemaps').gMap("centerAt", options);
-			}
-
-			// Create an array of styles.
-			var mapColor = "#161b29";
-
-			var styles = [{
-				stylers: [{
-					hue: mapColor
-				}]
-			}, {
-				featureType: "road",
-				elementType: "geometry",
-				stylers: [{
-					lightness: 0
-				}, {
-					visibility: "simplified"
-				}]
-			}, {
-				featureType: "road",
-				elementType: "labels",
-				stylers: [{
-					visibility: "off"
-				}]
-			}];
-
-			// Styles from https://snazzymaps.com/
-			var styles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#090A0D"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#090A0D"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#090A0D"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#090A0D"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#090A0D"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#090A0D"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":17}]}];
-
-			var styledMap = new google.maps.StyledMapType(styles, {
-				name: 'Styled Map'
-			});
-
-			mapRef.mapTypes.set('map_style', styledMap);
-			mapRef.setMapTypeId('map_style');
-
-		</script>
 
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.

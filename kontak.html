@@ -140,7 +140,7 @@
 														</a>
 													</li> -->
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle active" href="surat-page.html">
+														<a class="dropdown-item dropdown-toggle" href="surat-page.html">
 															Surat Online
 														</a>
 													</li>
@@ -150,7 +150,7 @@
 														</a>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="kontak.html">
+														<a class="dropdown-item dropdown-toggle active" href="kontak.html">
 															Kontak
 														</a>
 														
@@ -193,13 +193,13 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
-								<h1 class="font-weight-bold">Surat Online</h1>
-								<span class="text-color-light d-block position-relative font-weight-light">Pelayanan Surat Online</span>
+								<h1 class="font-weight-bold">Contact Us</h1>
+								<span class="text-color-light d-block position-relative font-weight-light">Get in touch with us</span>
 							</div>
 							<div class="col-md-4 order-1 order-md-2 align-self-center">
 								<ul class="breadcrumb d-block text-md-right">
 									<li><a href="index.html">Home</a></li>
-									<li class="active text-color-light">Surat Online</li>
+									<li class="active text-color-light">Contact Us</li>
 								</ul>
 							</div>
 						</div>
@@ -208,76 +208,95 @@
 
 				<section class="section bg-color-tertiary border-0 my-0 pb-4">
 					<div class="container">
-						
+						<div class="row pt-1 pb-4 mb-3">
+							<div class="col-lg-8">
 
-								<h2 class="font-weight-bold mb-4">Isi data Anda</h2>
-								<p class="pb-3 mb-4">Untuk mendapatkan pelayanan surat online harap pastikan Anda mengisi dengan benar.</p>
+								<h2 class="font-weight-bold mb-4">Send us a message</h2>
+								<p class="pb-3 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in arcu facilisis quam aliquam ultrices quis in purus. Donec volutpat et justo et viverra. Suspendisse id justo a ipsum viverra ultrices quis et quam.</p>
 
 								<form id="contactForm" class="contact-form custom-form-style-1" action="php/contact-form.php" method="POST">
-                                    <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-                                        <strong>Terkirim!</strong> Permintaan Anda berhasil diterima. Pengambilan surat harap dilukukan d kantor
-                                    </div>
-                                
-                                    <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-                                        <strong>Gagal!</strong> Permintaan Anda gagal terkirim.
-                                        <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
-                                    </div>
-                                    
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-6">
-                                            <label class="required font-weight-bold text-dark text-2">Nama Lengkap</label>
-                                            <input type="text" value="" data-msg-required="Silahkan masukkan nama Anda." maxlength="100" class="form-control" name="name" id="name" required>
-                                        </div>
-                                        <div class="form-group col-lg-6">
-                                            <label class="required font-weight-bold text-dark text-2">NIK</label>
-                                            <input type="number" value="" data-msg-required="Silahkan masukkan NIK Anda."  maxlength="16" class="form-control" name="nik" id="nik" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col">
-                                            <label class="required font-weight-bold text-dark text-2">Jenis Surat</label>
-                                            <select id="jenis" class="form-control" size="0" data-msg-required="Silahkan pilih jenis surat." required>
-                                                <option value=""></option>
-                                                <option value="1">Surat Keterangan Domisili</option>
-                                                <option value="2">Surat Keterangan Sudah/Belum Menikah</option>
-                                                <option value="3">Surat Keterangan Usaha</option>
-                                    
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col">
-                                            <label class="required font-weight-bold text-dark text-2">Perihal Surat</label>
-                                            <textarea maxlength="5000" data-msg-required="Silahkan masukkan perihal surat." rows="8" class="form-control" name="message" id="message" required></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-										<div class="form-group col">
-											<input type="submit" value="Kirim" class="btn btn-primary custom-btn-style-1 text-uppercase float-right" data-loading-text="Loading...">
+									<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
+										<strong>Success!</strong> Your message has been sent to us.
+									</div>
+
+									<div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
+										<strong>Error!</strong> There was an error sending your message.
+										<span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-lg-6">
+											<label>Your name *</label>
+											<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+										</div>
+										<div class="form-group col-lg-6">
+											<label>Your email address *</label>
+											<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
 										</div>
 									</div>
-                                </form>    
-							</div>
+									<div class="form-row">
+										<div class="form-group col">
+											<label>Subject</label>
+											<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject" required>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col">
+											<label>Message *</label>
+											<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required></textarea>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col">
+											<input type="submit" value="Send Message" class="btn btn-primary custom-btn-style-1 text-uppercase float-right" data-loading-text="Loading...">
+										</div>
+									</div>
+								</form>
 							
 
-					
+							</div>
+							<div class="col-lg-4">
+
+								<h4 class="text-primary mt-0 pt-0">Get in Touch</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+								<hr class="solid mt-4 mb-4">
+
+								<h4 class="text-primary">The Office</h4>
+								<ul class="list list-icons list-icons-style-3 mt-4">
+									<li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
+									<li><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-789</li>
+									<li><i class="far fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+								</ul>
+
+								<hr class="solid mt-4 mb-4">
+
+								<h4 class="text-primary">Business Hours</h4>
+								<ul class="list list-icons list-dark mt-4">
+									<li><i class="far fa-clock"></i> Monday - Friday - 9am to 5pm</li>
+									<li><i class="far fa-clock"></i> Saturday - 9am to 2pm</li>
+									<li><i class="far fa-clock"></i> Sunday - Closed</li>
+								</ul>
+
+							</div>
+
+						</div>
 					</div>
 				</section>
 
 				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-			
+				<div id="googlemaps" class="google-map mt-0 mb-0"></div>
 
-				<footer id="footer" class="bg-color-quaternary border-top-0 mt-0">
-					<div class="footer-copyright bg-color-quaternary border-top-0">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<p class="text-center">© Copyright 2019. All Rights Reserved.</p>
-								</div>
+			<footer id="footer" class="bg-color-quaternary border-top-0 mt-0">
+				<div class="footer-copyright bg-color-quaternary border-top-0">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p class="text-center">© Copyright 2019. All Rights Reserved.</p>
 							</div>
 						</div>
 					</div>
-				</footer>
+				</div>
+			</footer>
 		</div>
 
 		<!-- Vendor -->
