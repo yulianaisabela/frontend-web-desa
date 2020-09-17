@@ -1,0 +1,39 @@
+/* CSS Document */
+/* created by PT. Gamatechno Indonesia 2006/01 */
+body {
+    font-family: Times new roman;
+    font-size: 14px;
+    width: 20cm;
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+    padding: 1px;
+    margin: 0px;
+ }
+ 
+ @page size-A4 {size:  21.0cm 29.7cm; margin: 1.5cm;}
+ @page rotate-landscape {size: landscape; }
+
+ pre, p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    
+ }
+ table {
+    width: 500px;
+    border-collapse: collapse;
+ }
+
+ hr{
+    width: 550px;
+    background-color: black;
+ }
+ 
+table tr td th {
+    padding: 2px;
+}
+
+.signature {
+    float: right;
+    padding: 0px 0px 0px 0px;
+}
