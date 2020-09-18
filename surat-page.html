@@ -205,64 +205,156 @@
 						</div>
 					</div>
 				</section>
-
-				<section class="section bg-color-tertiary border-0 my-0 pb-4">
-					<div class="container">
-						
-
-								<h2 class="font-weight-bold mb-4">Isi data Anda</h2>
-								<p class="pb-3 mb-4">Untuk mendapatkan pelayanan surat online harap pastikan Anda mengisi dengan benar.</p>
-
-								<form id="contactForm" class="contact-form custom-form-style-1" action="php/contact-form.php" method="POST">
-                                    <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
-                                        <strong>Terkirim!</strong> Permintaan Anda berhasil diterima. Pengambilan surat harap dilukukan d kantor
-                                    </div>
-                                
-                                    <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
-                                        <strong>Gagal!</strong> Permintaan Anda gagal terkirim.
-                                        <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
-                                    </div>
-                                    
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-6">
-                                            <label class="required font-weight-bold text-dark text-2">Nama Lengkap</label>
-                                            <input type="text" value="" data-msg-required="Silahkan masukkan nama Anda." maxlength="100" class="form-control" name="name" id="name" required>
-                                        </div>
-                                        <div class="form-group col-lg-6">
-                                            <label class="required font-weight-bold text-dark text-2">NIK</label>
-                                            <input type="number" value="" data-msg-required="Silahkan masukkan NIK Anda."  maxlength="16" class="form-control" name="nik" id="nik" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col">
-                                            <label class="required font-weight-bold text-dark text-2">Jenis Surat</label>
-                                            <select id="jenis" class="form-control" size="0" data-msg-required="Silahkan pilih jenis surat." required>
-                                                <option value=""></option>
-                                                <option value="1">Surat Keterangan Domisili</option>
-                                                <option value="2">Surat Keterangan Sudah/Belum Menikah</option>
-                                                <option value="3">Surat Keterangan Usaha</option>
-                                    
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col">
-                                            <label class="required font-weight-bold text-dark text-2">Perihal Surat</label>
-                                            <textarea maxlength="5000" data-msg-required="Silahkan masukkan perihal surat." rows="8" class="form-control" name="message" id="message" required></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-										<div class="form-group col">
-											<input type="submit" value="Kirim" class="btn btn-primary custom-btn-style-1 text-uppercase float-right" data-loading-text="Loading...">
-										</div>
+		
+						<section class="section bg-color-tertiary border-0 my-0 pb-4">
+							<div class="container">
+								<div class="row pt-1 pb-4 mb-3">
+									<div class="col-lg-8">
+										<h2 class="font-weight-bold mb-4">Isi Data Anda</h2>
+										<p class="pb-3 mb-4">Silahkan mengisi data dengan benar untuk mendapatkan layanan surat online.</p>
+		
+										<form id="contactForm" class="contact-form custom-form-style-1" action="php/.php" method="POST">
+											<div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
+												<strong>Terkirim!</strong> Permintaan Anda berhasil diterima. Pengambilan surat harap dilukukan di kantor.
+											</div>
+										
+											<div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
+												<strong>Gagal!</strong> Permintaan Anda gagal terkirim.
+												<span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="nama">Nama Lengkap</label>
+												<input type="text" name="nama" class="form-control" id="nama" value="{{ old('nama') ?? $letter->nama }}" required autofocus autocomplete="off">
+												@error('nama')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="nik">NIK</label>
+												<input type="number"  name="nik" class="form-control" id="nik" value="{{ old('nik') ?? $letter->nik }}" required>
+												@error('nik')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="jk">Jenis Kelamin</label>
+												<select name="jk" id="jk" class="form-control" required>
+													<option disabled selected>~Jenis Kelamin~</option>
+													<option {{ old('jk') == 'Prempuan' ? 'selected' : ($letter->jk == 'Prempuan' ? 'selected' : '') }} value="Prempuan">Prempuan</option>
+													<option {{ old('jk') == 'Laki-laki' ? 'selected' : ($letter->jk == 'Laki-laki' ? 'selected' : '') }} value="Laki-laki">Laki-laki</option>
+												</select>
+												@error('jk')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="tmt_lahir">Tempat Lahir</label>
+												<input type="text" name="tmt_lahir" class="form-control" id="tmt_lahir" value="{{ old('tmt_lahir') ?? $letter->tmt_lahir }}" required>
+												@error('tmt_lahir')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="tgl_lahir">Tanggal Lahir</label>
+												<input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir" value="{{ old('tgl_lahir') ?? $letter->tgl_lahir }}" required>
+												@error('tgl_lahir')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="agama">Agama</label>
+												<select name="agama" id="agama" class="form-control" required>
+													<option disabled selected>~Agama~</option>
+													<option {{ old('agama') == 'Islam' ? 'selected' : ($letter->agama == 'Islam' ? 'selected' : '') }} value="Islam">Islam</option>
+													<option {{ old('agama') == 'Kristen' ? 'selected' : ($letter->agama == 'Kristen' ? 'selected' : '') }} value="Kristen">Kristen</option>
+													<option {{ old('agama') == 'Hindu' ? 'selected' : ($letter->agama == 'Hindu' ? 'selected' : '') }} value="Hindu">Hindu</option>
+													<option {{ old('agama') == 'Budha' ? 'selected' : ($letter->agama == 'Budha' ? 'selected' : '') }} value="Budha">Budha</option>
+													<option {{ old('agama') == 'Konghucu' ? 'selected' : ($letter->agama == 'Konghucu' ? 'selected' : '') }} value="Konghucu">Konghucu</option>
+												</select>
+												@error('agama')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="pekerjaan">Pekerjaan</label>
+												<select name="pekerjaan" id="pekerjaan" class="form-control" required>
+													<option disabled selected>~Pekerjaan~</option>
+													<option {{ old('pekerjaan') == 'Belum Bekerja' ? 'selected' : ($letter->pekerjaan == 'Belum Bekerja' ? 'selected' : '') }} value="Belum Bekerja">Belum Bekerja</option>
+													<option {{ old('pekerjaan') == 'Mengurus Rumah Tangga' ? 'selected' : ($letter->pekerjaan == 'Mengurus Rumah Tangga' ? 'selected' : '') }} value="Mengurus Rumah Tangga">Mengurus Rumah Tangga</option>
+													<option {{ old('pekerjaan') == 'Pelajar/Mahasiswa' ? 'selected' : ($letter->pekerjaan == 'Pelajar/Mahasiswa' ? 'selected' : '') }} value="Pelajar/Mahasiswa">Pelajar/Mahasiswa</option>
+													<option {{ old('pekerjaan') == 'Pensiunan' ? 'selected' : ($letter->pekerjaan == 'Pensiunan' ? 'selected' : '') }} value="Pensiunan">Pensiunan</option>
+													<option {{ old('pekerjaan') == 'Pegawai Negeri Sipil(PNS)' ? 'selected' : ($letter->pekerjaan == 'Pegawai Negeri Sipil(PNS)' ? 'selected' : '') }} value="Pegawai Negeri Sipil(PNS)">Pegawai Negeri Sipil(PNS)</option>
+													<option {{ old('pekerjaan') == 'Tentara Nasional Indonesia(TNI)' ? 'selected' : ($letter->pekerjaan == 'Tentara Nasional Indonesia(TNI)' ? 'selected' : '') }} value="Tentara Nasional Indonesia(TNI)">Tentara Nasional Indonesia(TNI)</option>
+													<option {{ old('pekerjaan') == 'Kepolisian RI (POLRI)' ? 'selected' : ($letter->pekerjaan == 'Kepolisian RI (POLRI)' ? 'selected' : '') }} value="Kepolisian RI (POLRI)">Kepolisian (POLRI)</option>
+													<option {{ old('pekerjaan') == 'Perdagangan' ? 'selected' : ($letter->pekerjaan == 'Perdagangan' ? 'selected' : '') }} value="Perdagangan">Perdagangan</option>
+													<option {{ old('pekerjaan') == 'Petani/Pekebun' ? 'selected' : ($letter->pekerjaan == 'Petani/Pekebun' ? 'selected' : '') }} value="Petani/Pekebun">Petani/Pekebun</option>
+													<option {{ old('pekerjaan') == 'Peternak' ? 'selected' : ($letter->pekerjaan == 'Peternak' ? 'selected' : '') }} value="Peternak">Peternak</option>
+												</select>
+												@error('pekerjaan')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="perkawinan">Perkawinan</label>
+												<select name="perkawinan" id="perkawinan" class="form-control" required>
+													<option disabled selected>~Perkawinan~</option>
+													<option {{ old('perkawinan') == 'Kawin' ? 'selected' : ($letter->perkawinan == 'Kawin' ? 'selected' : '') }} value="Kawin">Kawin</option>
+													<option {{ old('perkawinan') == 'Belum Kawin' ? 'selected' : ($letter->perkawinan == 'Belum Kawin' ? 'selected' : '') }} value="Belum Kawin">Belum Kawin</option>
+													<option {{ old('perkawinan') == 'Cerai Hidup' ? 'selected' : ($letter->perkawinan == 'Cerai Hidup' ? 'selected' : '') }} value="Cerai Hidup">Cerai Hidup</option>
+													<option {{ old('perkawinan') == 'Cerai Mati' ? 'selected' : ($letter->perkawinan == 'Cerai Mati' ? 'selected' : '') }} value="Cerai Mati">Cerai Mati</option>
+												</select>
+												@error('perkawinan')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="alamat">Alamat</label>
+												<textarea name="alamat" class="form-control" rows="5" id="alamat">{{ old('alamat') ?? $letter->alamat  }}</textarea>
+												@if ($errors->has('alamat'))
+												<small class="text-danger">{{ $errors->first('alamat') }}</small>
+												@endif
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="surat">Jenis Surat</label>
+												<select name="surat" id="surat" class="form-control" required>
+													<option disabled selected>~Pilih Jenis Surat~</option>
+													<option {{ old('surat') == 'Surat Keterangan Usaha' ? 'selected' : ($letter->surat == 'Surat Keterangan Usaha' ? 'selected' : '') }} value="Surat Keterangan Usaha">Surat Keterangan Usaha</option>
+													<option {{ old('surat') == 'Surat Keterangan Miskin' ? 'selected' : ($letter->surat == 'Surat Keterangan Miskin' ? 'selected' : '') }} value="Surat Keterangan Miskin">Surat Keterangan Miskin</option>
+													<option {{ old('surat') == 'Surat Keterangan Tidak Mampu' ? 'selected' : ($letter->surat == 'Surat Keterangan Tidak Mampu' ? 'selected' : '') }} value="Surat Keterangan Tidak Mampu">Surat Keterangan Tidak Mampu</option>
+													<option {{ old('surat') == 'Surat Keterangan Belum Pernah Menikah' ? 'selected' : ($letter->surat == 'Surat Keterangan Belum Pernah Menikah' ? 'selected' : '') }} value="Surat Keterangan Belum Pernah Menikah">Surat Keterangan Belum Pernah Menikah</option>
+													<option {{ old('surat') == 'Surat Keterangan Kalahiran' ? 'selected' : ($letter->surat == 'Surat Keterangan Kalahiran' ? 'selected' : '') }} value="Surat Keterangan Kalahiran">Surat Keterangan Kalahiran</option>
+													<option {{ old('surat') == 'Surat Keterangan Kematian' ? 'selected' : ($letter->surat == 'Surat Keterangan Kematian' ? 'selected' : '') }} value="Surat Keterangan Kematian">Surat Keterangan Kematian</option>
+													<option {{ old('surat') == 'Surat Keterangan Beda Nama' ? 'selected' : ($letter->surat == 'Surat Keterangan Beda Nama' ? 'selected' : '') }} value="Surat Keterangan Beda Nama">Surat Keterangan Beda Nama</option>
+													<option {{ old('surat') == 'Surat Keterangan Penghasilan' ? 'selected' : ($letter->surat == 'Surat Keterangan Penghasilan' ? 'selected' : '') }} value="Surat Keterangan Penghasilan">Surat Keterangan Penghasilan</option>
+													<option {{ old('surat') == 'Surat Keterangan Harga Tanah' ? 'selected' : ($letter->surat == 'Surat Keterangan Harga Tanah' ? 'selected' : '') }} value="Surat Keterangan Harga Tanah">Surat Keterangan Harga Tanah</option>
+												</select>
+												@error('surat')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											<div class="form-group">
+												<label class="required font-weight-bold text-dark text-2" for="perihal">Perihal</label>
+												<textarea name="perihal" class="form-control" rows="5" id="perihal">{{ old('perihal') ?? $letter->perihal  }}</textarea>
+												@error('perihal')
+												<small class="text-danger">{{ $message }}</small>
+												@enderror
+											</div>
+											
+											<div class="form-row">
+												<div class="form-group col">
+													<input type="submit" value="Kirim" class="btn btn-primary custom-btn-style-1 text-uppercase float-right" data-loading-text="Loading...">
+												</div>
+											</div>
+										</form>
 									</div>
-                                </form>    
+									<div class="col-lg-4">
+										<h4 class="text-primary mt-0 pt-0">Catatan</h4>
+										<p>Untuk pengambilan berkas surat dilakukan di kantor saat jam kerja.</p>
+									</div>
+		
+								</div>
 							</div>
-							
-
-					
-					</div>
-				</section>
+						</section>
 
 				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
 			
